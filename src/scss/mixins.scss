@@ -1,0 +1,23 @@
+@mixin subtextColor {
+  color: var(--text-lighter);
+  line-height: 1.7;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+@mixin transition {
+  transition: 0.3s all cubic-bezier(0.17, 0.67, 0.52, 0.94);
+}
+
+@mixin inputAnimation {
+  @include transition();
+
+  transform: scale(0.9) translate(-0.5rem, -1.7rem);
+  background: #fff;
+  color: var(--primary);
+  opacity: 1;
+}
+
+@mixin oswald {
+  font-family: 'Oswald', sans-serif;
+}

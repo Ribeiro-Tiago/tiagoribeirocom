@@ -1,0 +1,32 @@
+{
+  "name": "tiago-ribeiro.com",
+  "description": "My personal website at https://www.tiago-ribeiro.com",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "devDependencies": {
+    "@beyonk/svelte-carousel": "^2.4.0",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "autoprefixer": "^9.8.0",
+    "firebase": "^7.14.5",
+    "node-sass": "^4.14.1",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "sirv-cli": "^0.4.4",
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.7.4"
+  },
+  "repository": "https://github.com/Ribeiro-Tiago/tiago-ribeiro.com",
+  "author": {
+    "name": "Tiago Ribeiro",
+    "email": "tiagoribeiro.1803@gmail.com"
+  },
+  "license": "MIT",
+  "private": false
+}
