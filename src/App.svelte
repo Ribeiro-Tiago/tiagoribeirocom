@@ -165,11 +165,11 @@
     }
 
     .slick-next {
-      right: -20px;
+      right: 10px;
     }
 
     .slick-prev {
-      left: -20px;
+      left: 10px;
     }
 
     .slick-dots {
