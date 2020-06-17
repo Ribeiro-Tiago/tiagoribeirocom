@@ -13,6 +13,12 @@
       author: "Alexis Eggermon, accountable.eu",
       quote:
         "I had the pleasure of working directly with Tiago at Accountable. He was a great addition to the team, delivering consistently and with a high level of quality. He is very responsive to feedback and able to adapt quickly to the specific standards of the company. Tiago is also a lot of fun to be around."
+    },
+    {
+      img: "teixeira.webp",
+      author: "Alexandre Nuno Teixeira, inovinter.pt",
+      quote:
+        "Excellent professional. Worked together and developed projects together. Creative and always in search of the best solutions. I recommend"
     }
   ];
 
@@ -83,7 +89,7 @@
       {#each testimonials as t}
         <div class="slider-item">
           <div class="row">
-            <div class="col-10 offset-1 offset-sm-0 col-sm-8 col-lg-8">
+            <div class="col-10 offset-1 offset-sm-0 col-sm-12 col-lg-8">
               <blockquote>
                 <p class="quote">
                   <span>“</span>
