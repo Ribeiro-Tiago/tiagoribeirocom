@@ -34,7 +34,8 @@
 
   html,
   body {
-    padding: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
     margin: 0;
     width: 100%;
     height: 100%;
@@ -165,11 +166,11 @@
     }
 
     .slick-next {
-      right: -20px;
+      right: 10px;
     }
 
     .slick-prev {
-      left: -20px;
+      left: 10px;
     }
 
     .slick-dots {

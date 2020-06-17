@@ -3,7 +3,7 @@
 
   const projects = [
     {
-      img: "debtr.webp",
+      img: ["debtr.webp", "debtr-2.webp"],
       title: "Debtr",
       category: "mobile",
       description:
@@ -11,7 +11,7 @@
       android: "https://play.google.com/store/apps/details?id=com.debtr"
     },
     {
-      img: "work-clocker.webp",
+      img: ["work-clocker.webp", "work-clocker-2.webp"],
       title: "Work Clocker",
       category: "mobile",
       description:
@@ -62,7 +62,10 @@
       speed: 1000,
       mobileFirst: true,
       autoplay: true,
-      autoplaySpeed: 2000
+      autoplaySpeed: 2000,
+      adaptiveHeight: true,
+      lazyLoad: "progressive",
+      variableWidth: window.innerWidth <= 600
     });
   });
 </script>
@@ -84,7 +87,7 @@
   }
 
   #projects-slider {
-    width: 97%;
+    width: 100%;
     margin: auto;
 
     .slider-item {
@@ -214,10 +217,21 @@
         class={`slider-item d-flex justify-content-center ${p.category}`}
         style={window.innerWidth <= 992 ? `width: ${window.innerWidth}` : ''}>
         <div class="w-100 white-bg">
-          <img
-            class="m-auto"
-            src={`assets/images/projects/${p.img}`}
-            alt={p.title} />
+          {#if typeof p.img === 'string'}
+            <img
+              class="m-auto"
+              src={`assets/images/projects/${p.img}`}
+              alt={p.title} />
+          {:else}
+            <div class="d-flex justify-content-between">
+              {#each p.img as img}
+                <img
+                  class="m-auto"
+                  src={`assets/images/projects/${img}`}
+                  alt={p.title} />
+              {/each}
+            </div>
+          {/if}
           <div
             class="overlay d-flex justify-content-center flex-column
             align-items-center">
