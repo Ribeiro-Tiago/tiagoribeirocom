@@ -2,32 +2,32 @@ name: deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-  setup: 
+  setup:
     runs-on: ubuntu-latest
 
-    - name: install lftp
-      run: |
-        apt-get update -qy
-        apt-get install -y lftp
+    steps:
+      - name: install lftp
+        run: |
+          apt-get update -qy
+          apt-get install -y lftp
 
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Build
-      run: yarn build
+      - name: Build
+        run: yarn build
 
-    - name: Deploy
-      run: lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .*/ --reverse --verbose --delete public/ $DESTINATION_FOLDER; bye"
-      env: 
-        FTP_HOST = ${{ secrets.FTP_HOST }}
-        FTP_USERNAME = ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD = ${{ secrets.FTP_PASSWORD }}
-        DESTINATION_FOLDER = ${{ secrets.DESTINATION_FOLDER }}
+      - name: Deploy
+        run: lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .*/ --reverse --verbose --delete public/ $DESTINATION_FOLDER; bye"
+        env: FTP_HOST = ${{ secrets.FTP_HOST }}
+          FTP_USERNAME = ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD = ${{ secrets.FTP_PASSWORD }}
+          DESTINATION_FOLDER = ${{ secrets.DESTINATION_FOLDER }}
