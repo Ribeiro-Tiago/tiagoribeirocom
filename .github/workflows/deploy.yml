@@ -7,22 +7,16 @@ on:
     branches: [master]
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: install lftp
-        run: |
-          sudo apt-get update -qy
-          sudo apt-get install -y lftp
-
   deploy:
     runs-on: ubuntu-latest
 
-    needs: setup
-
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install lftp
+        run: |
+          sudo apt-get update -qy
+          sudo apt-get install -y lftp
 
       - name: Build
         run: |
