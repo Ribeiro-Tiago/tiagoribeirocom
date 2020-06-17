@@ -3,7 +3,7 @@
 
   const projects = [
     {
-      img: "debter.webp",
+      img: "debtr.webp",
       title: "Debtr",
       category: "mobile",
       description:
