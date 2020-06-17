@@ -29,7 +29,8 @@ jobs:
 
       - name: Deploy
         run: lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .*/ --reverse --verbose --delete public/ $DESTINATION_FOLDER; bye"
-        env: FTP_HOST = ${{ secrets.FTP_HOST }}
-          FTP_USERNAME = ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD = ${{ secrets.FTP_PASSWORD }}
-          DESTINATION_FOLDER = ${{ secrets.DESTINATION_FOLDER }}
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          DESTINATION_FOLDER: ${{ secrets.DESTINATION_FOLDER }}
