@@ -23,7 +23,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build
-        run: yarn build
+        run: |
+          yarn install
+          yarn build
 
       - name: Deploy
         run: lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .*/ --reverse --verbose --delete public/ $DESTINATION_FOLDER; bye"
