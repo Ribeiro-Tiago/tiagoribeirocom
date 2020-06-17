@@ -29,6 +29,12 @@
     }
 
     @media (max-width: 576px) {
+      .intro-section {
+        h1 {
+          font-size: 2.5rem !important;
+        }
+      }
+
       .content {
         > div {
           text-align: center !important;
@@ -143,7 +149,7 @@
             <i class="fab fa-2x fa-medium" />
           </a>
         </div>
-        <p>
+        <p class="d-none d-sm-block">
           <a
             href="#projects"
             on:click={onClick}
