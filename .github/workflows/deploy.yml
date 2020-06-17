@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: install lftp
         run: |
-          apt-get update -qy
-          apt-get install -y lftp
+          sudo apt-get update -qy
+          sudo apt-get install -y lftp
 
   deploy:
     runs-on: ubuntu-latest
