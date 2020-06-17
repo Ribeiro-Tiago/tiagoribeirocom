@@ -3,6 +3,14 @@
 
   const projects = [
     {
+      img: "debtr.webp",
+      title: "Debtr",
+      category: "mobile",
+      description:
+        "A very simple assistant app to help one to keep on top of which monthly expenses were already paid and those that are still left, so you can better manage your spending money.",
+      android: "https://play.google.com/store/apps/details?id=com.debtr"
+    },
+    {
       img: "work-clocker.webp",
       title: "Work Clocker",
       category: "mobile",
