@@ -176,10 +176,6 @@
     <div class="row d-flex align-items-center">
       <div class="col-md-10 offset-md-1 offset-xl-1 col-xl-5">
         <h2 class="section-title">Get in contact</h2>
-        <p class="section-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus
-          distinctio ex.
-        </p>
 
         <form action="">
           <div class="row">
