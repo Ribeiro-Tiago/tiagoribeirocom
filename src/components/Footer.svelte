@@ -6,5 +6,5 @@
 </style>
 
 <footer class="bg-light-gray d-flex justify-content-center align-items-center">
-  Copyright ©2020 All rights reserved | Tiago Ribeiro
+  Copyright ©2018-{new Date().getFullYear()} All rights reserved | Tiago Ribeiro
 </footer>
