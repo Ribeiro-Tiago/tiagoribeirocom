@@ -1,4 +1,4 @@
-# tiago-ribeiro.com
+# [tiago-ribeiro.com](https://tiago-ribeiro.com)
 
 Personal website for freelancing stuff
 
